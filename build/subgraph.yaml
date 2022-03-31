@@ -1,12 +1,12 @@
 specVersion: 0.0.2
 schema:
-  file: ./schema.graphql
+  file: schema.graphql
 dataSources:
   - kind: ethereum
     name: MockDai
     network: mumbai
     source:
-      address: '0x3eAb19653ca8143c30ABb633FABFb1f9b4F2A642'
+      address: "0x3eAb19653ca8143c30ABb633FABFb1f9b4F2A642"
       abi: MockDai
       startBlock: 25741490
     mapping:
@@ -18,10 +18,10 @@ dataSources:
         - Transfer
       abis:
         - name: MockDai
-          file: ./abis/MockDai.json
+          file: MockDai/abis/MockDai.json
       eventHandlers:
         - event: Approval(indexed address,indexed address,uint256)
           handler: handleApproval
         - event: Transfer(indexed address,indexed address,uint256)
           handler: handleTransfer
-      file: ./src/mapping.ts
+      file: MockDai/MockDai.wasm
