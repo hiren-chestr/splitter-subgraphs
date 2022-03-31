@@ -1,0 +1,16 @@
+{
+  "name": "splitter-subgraphs",
+  "license": "UNLICENSED",
+  "scripts": {
+    "codegen": "graph codegen",
+    "build": "graph build",
+    "deploy": "graph deploy --node https://api.thegraph.com/deploy/ hiren-chestr/splitter-subgraphs",
+    "create-local": "graph create --node http://localhost:8020/ hiren-chestr/splitter-subgraphs",
+    "remove-local": "graph remove --node http://localhost:8020/ hiren-chestr/splitter-subgraphs",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 hiren-chestr/splitter-subgraphs"
+  },
+  "dependencies": {
+    "@graphprotocol/graph-cli": "0.29.0",
+    "@graphprotocol/graph-ts": "0.26.0"
+  }
+}

@@ -1,0 +1,13 @@
+type DaiTransfer @entity {
+  id: ID!
+  amount: BigInt!
+  from: Bytes! # address
+  to: Bytes! # address
+}
+
+type Approval @entity {
+  id: ID!
+  count: BigInt!
+  owner: Bytes! # address
+  spender: Bytes! # address
+}
